@@ -16,7 +16,11 @@ PROJECT_ROOT = Path(__file__).parent.parent.parent.resolve()
 MODELS_DIR = PROJECT_ROOT / "models"
 BANNER_PATH = PROJECT_ROOT / "assets" / "Banner.png"
 SAMPLE_IMAGES_DIR = Path(__file__).parent / "assets"
-LABELS_WEIGHT_DIR = Path("/Users/andresetiawan/Training/AI/capstone-yolo/labels_weight").resolve()
+LOCAL_LABELS_WEIGHT = Path("/Users/andresetiawan/Training/AI/capstone-yolo/labels_weight")
+if LOCAL_LABELS_WEIGHT.exists():
+    LABELS_WEIGHT_DIR = LOCAL_LABELS_WEIGHT.resolve()
+else:
+    LABELS_WEIGHT_DIR = PROJECT_ROOT / "labels_weight"
 if Path("/Users/andresetiawan/Training/AI/capstone-yolo/data.yaml").exists():
     DATA_YAML_PATH = Path("/Users/andresetiawan/Training/AI/capstone-yolo/data.yaml").resolve()
 else:
