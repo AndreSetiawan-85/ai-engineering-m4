@@ -17,7 +17,10 @@ MODELS_DIR = PROJECT_ROOT / "models"
 BANNER_PATH = PROJECT_ROOT / "assets" / "Banner.png"
 SAMPLE_IMAGES_DIR = Path(__file__).parent / "assets"
 LABELS_WEIGHT_DIR = Path("/Users/andresetiawan/Training/AI/capstone-yolo/labels_weight").resolve()
-DATA_YAML_PATH = Path("/Users/andresetiawan/Training/AI/capstone-yolo/data.yaml").resolve()
+if Path("/Users/andresetiawan/Training/AI/capstone-yolo/data.yaml").exists():
+    DATA_YAML_PATH = Path("/Users/andresetiawan/Training/AI/capstone-yolo/data.yaml").resolve()
+else:
+    DATA_YAML_PATH = Path(__file__).parent.parent.parent / "data.yaml"
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
