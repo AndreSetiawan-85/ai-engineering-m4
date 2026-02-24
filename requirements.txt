@@ -1,0 +1,9 @@
+streamlit
+supervision
+opencv-python
+numpy
+pyyaml
+openai
+ultralytics
+Pillow
+python-dotenv
