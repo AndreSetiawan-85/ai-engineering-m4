@@ -1,0 +1,19 @@
+names:
+- potato
+- water
+- sausage
+- cheese_sticks
+- black_tea
+- mayonnaise
+- grilled_vegetables
+- rice
+- rice_porridge
+- broccoli
+- tiramisu
+- lemonade
+
+nc: 12
+
+train: /content/drive/MyDrive/Food_Portion_Benchmark/train/images
+val: /content/drive/MyDrive/Food_Portion_Benchmark/val/images
+test: /content/drive/MyDrive/Food_Portion_Benchmark/test/images

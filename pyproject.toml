@@ -1,0 +1,25 @@
+[project]
+name = "capstone-yolo"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Andre Setiawan", email = "ai.scientist.2025@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy (>=2.4.1,<3.0.0)",
+    "streamlit (>=1.53.1,<2.0.0)",
+    "supervision (>=0.27.0,<0.28.0)",
+    "pillow (>=12.1.0,<13.0.0)",
+    "ultralytics (>=8.4.14,<9.0.0)",
+    "openai (>=2.21.0,<3.0.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "capstone_yolo", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
